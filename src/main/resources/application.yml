@@ -1,0 +1,27 @@
+server:
+  port: 8081
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 2048MB
+      max-request-size: 2048MB
+  h2:
+    console:
+      enabled: true
+      path:  /h2
+  datasource:
+    driver-class-name: org.h2.Driver
+    #url: jdbc:h2:./src/main/resources/h2/hw
+    url: jdbc:h2:./h2/hw
+    username: sa
+    password: ''
+    tomcat.max-wait: 5000
+    tomcat.test-on-borrow: true
+
+
+
+logging:
+  logback:
+    rollingpolicy:
+      max-file-size: 10MB
